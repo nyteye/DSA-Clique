@@ -1,0 +1,16 @@
+void printFreq(vector<int> &arr, int N)
+    {
+        int freq = 1;
+        for (int i = 1; i < N; i++)
+        {
+            if (arr[i] == arr[i - 1])
+            {
+                freq++;
+            }
+            else {
+                cout<<"Frequency of "<<arr[i - 1]<< " is: " << freq<<endl;
+                freq = 1;
+            }
+        }
+       cout<<"Frequency of "<<arr[N - 1]<< " is: " << freq<<endl;
+    }

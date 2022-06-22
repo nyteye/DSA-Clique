@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int maximumDifference(vector<int>& nums) {
+        int n = nums.size();
+        int ans = -1, k = 0;;
+        for (int i=1; i<n; i++){
+            if (nums[i]>nums[k]){
+                ans = max(ans, nums[i]-nums[k]);
+            }
+            else {
+                k = i;
+            }
+        }
+        return ans;
+    }
+};
