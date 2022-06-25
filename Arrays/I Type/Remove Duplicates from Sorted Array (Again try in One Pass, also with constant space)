@@ -1,12 +1,12 @@
 int remove_duplicate(int A[],int N){
         
-         int cur=0;
-        for(int i=1; i<N; i++)
+        int cur = 0;
+        for(int i = 1; i < N; i++)
         {
-            if(A[i]!=A[cur])
+            if(A[i] != A[cur])
             {
-                A[++cur]=A[i];
+                A[++cur] = A[i];
             }
         }
-        return (cur+1);
+        return(cur + 1);
     }

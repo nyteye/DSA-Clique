@@ -1,21 +1,21 @@
 public void moveZeroes(int[] nums) {
         
-        int cur=0, count=0;
-        for(int i=0; i<nums.length; i++)
+        int cur = 0, count = 0;
+        for(int i = 0; i < nums.length; i++)
         {
-            if(nums[i]!=0)
+            if(nums[i] != 0)
             {
-                if(i!=cur)
-                   nums[cur]=nums[i];
+                if(i != cur)
+                   nums[cur] = nums[i];
                 cur++;
             }
-            else if(nums[i]==0)
+            else if(nums[i] == 0)
                 count++;
         }
-        int j=nums.length-1;
-        while(count>0)
+        int j = nums.length - 1;
+        while(count > 0)
         {
-            nums[j--]=0;
+            nums[j--] = 0;
             count--;
         }
     }
