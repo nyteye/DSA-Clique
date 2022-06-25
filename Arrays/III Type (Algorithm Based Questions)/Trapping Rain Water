@@ -1,0 +1,12 @@
+long maxSubarraySum(int arr[], int n){
+        int sum = 0, max = Integer.MIN_VALUE;
+        for(int i=0; i<n; i++)
+        {
+            sum += arr[i];
+            if(arr[i] > sum)
+               sum = arr[i];
+            if(sum > max)
+               max = sum;
+        }
+        return max;
+        
